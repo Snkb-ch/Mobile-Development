@@ -31,4 +31,13 @@
             android:id="@+id/action_nav_brouser_to_nav_gallery"
             app:destination="@id/nav_gallery" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_worker"
+        android:name="ru.mirea.boevas.mireaproject.BlankFragment2"
+        android:label="fragment_blank2"
+        tools:layout="@layout/fragment_blank2" >
+        <action
+            android:id="@+id/action_blankFragment2_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>

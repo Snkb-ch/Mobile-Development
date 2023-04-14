@@ -20,6 +20,12 @@
             android:id="@+id/nav_brouser"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_brouser"
+
+            />
+        <item
+            android:id="@+id/nav_worker"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/nav_worker"
             />
     </group>
 </menu>
