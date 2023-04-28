@@ -1,8 +1,11 @@
 package ru.mirea.boevas.mireaproject;
 
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -17,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import ru.mirea.boevas.mireaproject.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
