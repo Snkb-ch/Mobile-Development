@@ -27,5 +27,15 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/nav_worker"
             />
+        <item
+            android:id="@+id/nav_profile"
+
+            android:title="Profile"
+            />
+        <item
+            android:id="@+id/nav_file"
+
+            android:title="File"
+            />
     </group>
 </menu>
