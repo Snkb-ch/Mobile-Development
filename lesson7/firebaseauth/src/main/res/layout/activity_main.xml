@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Авторизация"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Статус"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:id="@+id/statusTextView"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:id="@+id/detailTextView"
+        />
+
+
+    <!-- Поле ввода почты -->
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите почту" />
+
+    <!-- Поле ввода пароля -->
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите пароль"
+        android:inputType="textPassword" />
+
+    <!-- Первая кнопка -->
+    <Button
+        android:id="@+id/signedInButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Войти" />
+
+    <!-- Вторая кнопка -->
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Зарегистрироваться" />
+    <Button
+        android:id="@+id/verifyEmailButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="подтвердить почту" />
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выйти" />
+
+    <!-- Кнопка для выхода в углу -->
+
+
+</LinearLayout>
