@@ -28,7 +28,7 @@ import ru.mirea.boevas.timeservice.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private final String host = "time.nist.gov"; // или time-a.nist.gov
+    private final String host = "time.nist.gov";
     private final int port = 13;
 
     @Override
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Socket socket = new Socket(host, port);
                 BufferedReader reader = SocketUtils.getReader(socket);
-                reader.readLine(); // игнорируем первую строку
-                timeResult = reader.readLine(); // считываем вторую строку
+                reader.readLine();
+                timeResult = reader.readLine();
 
                 socket.close();
             } catch (IOException e) {
@@ -67,15 +67,14 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
-            // Разбор полученной строки и создание экрана отображения времени и даты
+
 
             try {
-                // Удаление миллисекунд и первой части строки с датой и временем
-                String[] parts = result.split(" ");
-                String datePart = parts[1]; // Индекс 1 содержит дату и время
-                String timePart = parts[2]; // Индекс 2 содержит часовой пояс
 
-                // вывод даты и времени
+                String[] parts = result.split(" ");
+                String datePart = parts[1];
+                String timePart = parts[2];
+
 
                 binding.textView.setText(datePart + " " + timePart);
 
