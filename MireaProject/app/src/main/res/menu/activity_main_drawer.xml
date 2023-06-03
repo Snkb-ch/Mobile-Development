@@ -46,5 +46,9 @@
             android:id="@+id/nav_weather"
 
             android:title="Weather" />
+        <item
+            android:id="@+id/nav_map"
+
+            android:title="Map" />
     </group>
 </menu>
