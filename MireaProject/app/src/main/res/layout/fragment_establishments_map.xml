@@ -13,11 +13,11 @@
         android:layout_height="wrap_content"
         android:text="Кофейня SurfCoffe Ulitsa Usacheva, 62 Moscow"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.049" />
 
     <org.osmdroid.views.MapView
         android:id="@+id/mapView"
@@ -36,10 +36,10 @@
         android:text="МИРЭА - Проспект Вернадского 78"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.421" />
 
     <TextView
         android:id="@+id/textView10"
@@ -48,9 +48,9 @@
         android:text="ТЦ Звездочка"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.241" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

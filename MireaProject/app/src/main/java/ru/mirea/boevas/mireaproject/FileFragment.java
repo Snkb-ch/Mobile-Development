@@ -1,21 +1,15 @@
 package ru.mirea.boevas.mireaproject;
 
+import android.content.Context;
 import android.os.Bundle;
-
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-
 
 public class FileFragment extends DialogFragment {
 
@@ -59,29 +53,29 @@ public class FileFragment extends DialogFragment {
         String fileName = mFileNameEditText.getText().toString();
         String fileExtension = ".txt";
 
-        File file = new File(getActivity().getExternalFilesDir(null), fileName + fileExtension);
         try {
-            boolean result = file.createNewFile();
-            if (result) {
-                String fileContent = mFileContentEditText.getText().toString();
-                // Шифрование файла (например, AES-128)
-                String encryptedFileContent = encrypt(fileContent);
-                FileOutputStream fileOutputStream = new FileOutputStream(file);
-                fileOutputStream.write(encryptedFileContent.getBytes());
-                fileOutputStream.close();
-                Toast.makeText(requireContext(), "File created and encrypted successfully", Toast.LENGTH_SHORT).show();
-                dismiss();
-            } else {
-                Toast.makeText(requireContext(), "Failed to create file", Toast.LENGTH_SHORT).show();
-            }
-        } catch (IOException e) {
+            FileOutputStream outputStream = getActivity().openFileOutput(fileName + fileExtension, Context.MODE_PRIVATE);
+            String fileContent = mFileContentEditText.getText().toString();
+
+
+            byte[] encryptedBytes = encryptXOR(fileContent.getBytes(), 42);
+
+            outputStream.write(encryptedBytes);
+            outputStream.close();
+            Toast.makeText(requireContext(), "File created successfully", Toast.LENGTH_SHORT).show();
+            dismiss();
+        } catch (Exception e) {
             e.printStackTrace();
+            Toast.makeText(requireContext(), "Failed to create file", Toast.LENGTH_SHORT).show();
         }
     }
 
-    // Функция шифрования
-    private String encrypt(String fileContent) {
-        // Реализация шифрования (например, AES-128)
-        return "encrypted " + fileContent;
+    private byte[] encryptXOR(byte[] input, int key) {
+        byte[] output = new byte[input.length];
+        for (int i = 0; i < input.length; i++) {
+            output[i] = (byte) (input[i] ^ key);
+        }
+        return output;
     }
+
 }

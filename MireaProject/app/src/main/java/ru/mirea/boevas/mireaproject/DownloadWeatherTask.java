@@ -21,7 +21,7 @@ public class DownloadWeatherTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        // Добавьте код для обновления интерфейса перед загрузкой погоды
+
     }
 
     @Override
@@ -36,10 +36,10 @@ public class DownloadWeatherTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        // Обновите интерфейс после загрузки погоды
+
         try {
             JSONObject responseJson = new JSONObject(result);
-            // Обработайте JSON-ответ и обновите соответствующие текстовые поля
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

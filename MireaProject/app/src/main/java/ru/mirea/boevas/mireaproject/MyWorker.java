@@ -17,6 +17,7 @@ public class MyWorker extends Worker {
             @NonNull WorkerParameters params) {
         super(context, params);
     }
+
     @Override
     public Result doWork() {
         Log.d(TAG, "doWork: start");
